@@ -1,15 +1,13 @@
-import file1 from '../../assets/file1.pdf';
-import file2 from '../../assets/file2.pdf';
-import file3 from '../../assets/file3.pdf';
-import file4 from '../../assets/file4.pdf';
-
 export default class DownloadManager {
   constructor(appTag) {
     this.appContainer = document.querySelector(appTag);
     this.fileRow = Array.from(this.appContainer.querySelectorAll('.position-row'));
     this.allLinks = Array.from(this.appContainer.querySelectorAll('.file-link'));
     this.allFiles = {
-      file1, file2, file3, file4,
+      file1:this.allLinks[0].href, 
+      file2:this.allLinks[1].href, 
+      file3:this.allLinks[2].href, 
+      file4:this.allLinks[3].href,
     };
     this.allFilesParam = [];
     this.totalTag = this.appContainer.querySelector('.size');
